@@ -6,7 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ecole</title>
-  <link rel="stylesheet" crossorigin href="/assets/app-HcExxiiB.css">
+  <script src="src/scripts/ecole.js" defer></script>
+  <link rel="stylesheet" crossorigin href="/assets/app--EUDhuKR.css">
 </head>
 
 <body>
@@ -24,7 +25,48 @@
     </nav>
 
     <div id="ecole">
-        ecole
+      <div id="onglets">
+        <p id="seulOnglet" class="selected">Projets seul</p>
+        <p id="groupeOnglet">Projets en groupe</p>
+      </div>
+
+      <div id="seul">
+        <div>
+          <h2>Fiche de synthèse</h2>
+          <a href="docs/fiche-synthese.pdf" target="_blank"><button>Fiche de synthèse</button></a>
+        </div>
+        <hr>
+        <div>
+          <h2>Mes projets seul</h2>
+          <h3>la Dubibrairie, une librairie sur la base de l'api google books : <a href="https://github.com/DUBIPRINCI/Dubibrairie" target="_blank"><button>Dubibrairie</button></a></h3>
+          <h3>la PokeApi, une plateforme pour faire un inventaire de pokemon sur la base de l'api google books : <a href="https://github.com/DUBIPSSI/Pokeapi" target="_blank"><button>PokeApi</button></a></h3>
+          <!-- <h3>Travail sur le logiciel GLPI : <a href="docs/DOC_GLPI.pdf" target="_blank"><button>GLPI</button></a></h3> -->
+        </div>
+      </div>
+
+      <div id="groupe" class="hidden">
+        <div>
+          <h2>Atelier Professionnel 1 : Création d'une entreprise fictive d'hebergement cloud</h2>
+          <div id="ap1">
+            <iframe src="docs/AP_DIAPO.pdf" height="550" width="50%" frameborder="0"></iframe>
+            <div>
+              <h3>Documentation et administratifs</h3>
+              <a href="docs/trello-ap1.png" target="_blank"><button>Trello</button></a>
+              <a href="docs/Facture-CPSS-vierge.pdf" target="_blank"><button>Facture CPSS</button></a>
+              <a href="docs/fiche-de-poste.pdf" target="_blank"><button>Fiche de poste</button></a>
+              <a href="docs/kbis_CPSS.pdf" target="_blank"><button>KBIS</button></a>
+              <a href="docs/Academic-Club-Budget-FR.pdf" target="_blank"><button>Budget Prévisionnel</button></a>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div>
+          <h2>Atelier Professionnel 2</h2>
+          <div id="ap2">
+            <iframe src="docs/AP2_DIAPO.pdf" height="550" width="50%" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
