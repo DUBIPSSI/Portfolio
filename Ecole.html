@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ecole</title>
-  <script src="src/scripts/ecole.js" defer></script>
-  <link rel="stylesheet" crossorigin href="/assets/app--EUDhuKR.css">
+  <!-- <script src="src/scripts/ecole.js" defer></script> -->
+  <link rel="stylesheet" crossorigin href="/assets/app.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
       <a href="/">Accueil</a>
       <div>
         <a href="Profil">Profil</a>
-        <a href="Competences">Compétences</a>
+        <!-- <a href="Competences">Compétences</a> -->
         <a href="BTS-SIO">BTS SIO</a>
         <a href="Ecole">Ecole</a>
         <a href="Entreprise">Entreprise</a>
@@ -38,9 +38,31 @@
         <hr>
         <div>
           <h2>Mes projets seul</h2>
-          <h3>la Dubibrairie, une librairie sur la base de l'api google books : <a href="https://github.com/DUBIPRINCI/Dubibrairie" target="_blank"><button>Dubibrairie</button></a></h3>
-          <h3>la PokeApi, une plateforme pour faire un inventaire de pokemon sur la base de l'api google books : <a href="https://github.com/DUBIPSSI/Pokeapi" target="_blank"><button>PokeApi</button></a></h3>
-          <!-- <h3>Travail sur le logiciel GLPI : <a href="docs/DOC_GLPI.pdf" target="_blank"><button>GLPI</button></a></h3> -->
+          <div id='projectCardContainer'>
+            <div class="projectCard">
+              <h3>La Dubibrairie</h3>
+              <p>Une librairie sur la base de l'api google books</p>
+              <div>
+                <a href="https://github.com/DUBIPRINCI/Dubibrairie" target="_blank"><button>Fichiers</button></a>
+                <a href="/docs/dubibrairie.pdf" target="_blank"><button>Documentation</button></a>
+              </div>
+            </div>
+            <div class="projectCard">
+              <h3>La PokeApi</h3>
+              <p>Une plateforme pour faire un inventaire de pokemon sur la base de l'api google books</p>
+              <div>
+                <a href="https://github.com/DUBIPSSI/Pokeapi" target="_blank"><button>Fichiers</button></a>
+                <a href="docs/pokeapi.pdf" target="_blank"><button>Documentation</button></a>
+              </div>
+            </div>
+            <div class="projectCard">
+              <h3>GLPI</h3>
+              <p>Travail sur le logiciel GLPI</p>
+              <div>
+                <a href="docs/DOC_GLPI.pdf" target="_blank"><button>GLPI</button></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -66,10 +88,32 @@
             <iframe src="docs/AP2_DIAPO.pdf" height="550" width="50%" frameborder="0"></iframe>
           </div>
         </div>
+        <hr>
+        <div>
+          <h2>Atelier Professionnel 3</h2>
+          <div id="ap2">
+            <iframe src="docs/documentation-AP3.pdf" height="550" width="50%" frameborder="0"></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+    const seulOnglet = document.getElementById('seulOnglet');
+    const groupeOnglet = document.getElementById('groupeOnglet');
+    const seul = document.getElementById('seul');
+    const groupe = document.getElementById('groupe');
 
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('#onglets')) {
+        console.log("onlgets");
+        seulOnglet.classList.toggle('selected');
+        groupeOnglet.classList.toggle('selected');
+        seul.classList.toggle('hidden')
+        groupe.classList.toggle('hidden')
+      }
+    })
+  </script>
 </body>
 
 </html>
