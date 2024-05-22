@@ -1,0 +1,1 @@
+const t=document.getElementById("seulOnglet"),l=document.getElementById("groupeOnglet"),s=document.getElementById("seul"),g=document.getElementById("groupe");document.addEventListener("click",e=>{e.target.closest("#onglets")&&(console.log("onlgets"),t.classList.toggle("selected"),l.classList.toggle("selected"),s.classList.toggle("hidden"),g.classList.toggle("hidden"))});
